@@ -236,6 +236,7 @@ static int xerror(Display *dpy, XErrorEvent *ee);
 static int xerrordummy(Display *dpy, XErrorEvent *ee);
 static int xerrorstart(Display *dpy, XErrorEvent *ee);
 static void zoom(const Arg *arg);
+static void runAutostart();
 
 /* variables */
 static const char broken[] = "broken";
@@ -2152,6 +2153,12 @@ zoom(const Arg *arg)
 	pop(c);
 }
 
+void
+runAutostart()
+{
+	system("cd ~/.config; ./autostart");
+}
+
 int
 main(int argc, char *argv[])
 {
@@ -2170,6 +2177,7 @@ main(int argc, char *argv[])
 		die("pledge");
 #endif /* __OpenBSD__ */
 	scan();
+	runAutostart();
 	run();
 	if(restart) execvp(argv[0], argv);
 	cleanup();

@@ -15,7 +15,7 @@ static const char dmenufont[]       = "monospace:size=10";
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", dmenu_nb, "-nf", dmenu_nf, "-sb", dmenu_sb, "-sf", dmenu_sf, NULL };
-static const char *termcmd[]  = { "kitty" };
+static const char *termcmd[]  = { "alacritty" };
 
 /* tagging */
 static const char *tags[] = { "", "", "", "", "", "" };

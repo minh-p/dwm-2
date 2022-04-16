@@ -1,11 +1,13 @@
 /* See LICENSE file for copyright and license details. */
 
+#include <string.h>
+
 /* appearance */
-static const unsigned int borderpx  = 1;        /* border pixel of windows */
+static const unsigned int borderpx  = 3;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "monospace:size=10" };
+static const char *fonts[]          = {"Font Awesome 6 Free:size=8", "monospace:size=10"};
 static const char dmenufont[]       = "monospace:size=10";
 #include "./schemes/default.h"
 #include "./schemes/default-dmenu.h"
@@ -13,10 +15,10 @@ static const char dmenufont[]       = "monospace:size=10";
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", dmenu_nb, "-nf", dmenu_nf, "-sb", dmenu_sb, "-sf", dmenu_sf, NULL };
-static const char *termcmd[]  = { "kitty" };
+static const char *termcmd[]  = { "alacritty" };
 
 /* tagging */
-static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
+static const char *tags[] = { "", "", "", "", "", "" };
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -25,8 +27,10 @@ static const Rule rules[] = {
 	 */
 	/* class      instance    title       tags mask     isfloating   monitor */
 	{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
-	{ "Firefox",  NULL,       NULL,       1 << 8,       0,           -1 },
+	{ "firefox",  NULL,       NULL,       1 << 1,       0,           -1 },
+	{ "qutebrowser",  NULL,       NULL,       1 << 1,       0,           -1 },
 	{ "discord",  NULL,       NULL,       1 << 2,			0,           -1 },
+	{ "mpv",	  NULL,       NULL,       1 << 7,			0,           -1 },
 };
 
 /* layout(s) */

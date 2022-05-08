@@ -9,16 +9,23 @@ static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = {"Font Awesome 6 Free:size=8", "monospace:size=10"};
 static const char dmenufont[]       = "monospace:size=10";
+static const unsigned int colorfultitle  = 1;  /* 0 means title use SchemeTitle and SchemeTitleFloat */
+static const unsigned int colorfultag    = 1;  /* 0 means use SchemeSel for selected tag */
 #include "./schemes/default-custom.h"
-#include "./schemes/default-dmenu.h"
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", dmenu_nb, "-nf", dmenu_nf, "-sb", dmenu_sb, "-sf", dmenu_sf, NULL };
+static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_bg, "-nf", col_fg, "-sb", col_dark, "-sf", col_blue, NULL };
 static const char *termcmd[]  = { "alacritty" };
 
 /* tagging */
 static const char *tags[] = { "", "", "", "", "", "" };
+static const int tagschemes[] = { SchemeTag1, SchemeTag2, SchemeTag3,
+                                  SchemeTag4, SchemeTag5, SchemeTag6,
+                                  SchemeTag7, SchemeTag8, SchemeTag9 };
+static const int titleschemes[] = { SchemeTitle1, SchemeTitle2, SchemeTitle3,
+                                    SchemeTitle4, SchemeTitle5, SchemeTitle6,
+                                    SchemeTitle7, SchemeTitle8, SchemeTitle9 };
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -93,6 +100,8 @@ static Key keys[] = {
 	TAGKEYS(                        XK_9,                      8)
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
 	{ MODKEY|ControlMask|ShiftMask, XK_q,      quit,           {1} }, 
+	{ MODKEY|ShiftMask,          XK_n,            togglecolorfultag,   {0} },
+	{ MODKEY|ControlMask,           XK_n,            togglecolorfultitle, {0} },
 };
 
 /* button definitions */

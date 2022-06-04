@@ -1,4 +1,4 @@
-![Dwm Screenshot]["https://github.com/minh-p/dwm-2/blob/main/screenshots/currentBuild.png" This is my Dwm build]
+![Dwm Screenshot]("/repository/screenshots/currentBuild.png" This is my Dwm build)
 
 dwm - dynamic window manager
 ============================

@@ -1,4 +1,4 @@
-![Dwm Screenshot]("/repository/screenshots/currentBuild.png" "This is my Dwm build")
+![Dwm Screenshot](screenshots/currentBuild.png "This is my Dwm build")
 
 dwm - dynamic window manager
 ============================

@@ -1,3 +1,5 @@
+![Dwm Screenshot]["/repository/screenshots/currentBuild.jpg" This is my Dwm build]
+
 dwm - dynamic window manager
 ============================
 dwm is an extremely fast, small, and dynamic window manager for X.
@@ -6,6 +8,7 @@ dwm is an extremely fast, small, and dynamic window manager for X.
 Requirements
 ------------
 In order to build dwm you need the Xlib header files.
+The screenshot shown above has the default dmenu build from suckless and configured dwmblocks.
 
 
 Installation

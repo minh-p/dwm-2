@@ -21,6 +21,8 @@ static const unsigned int colorfultag    = 1;  /* 0 means use SchemeSel for sele
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_bg, "-nf", col_fg, "-sb", col_dark, "-sf", col_blue, NULL };
 static const char *termcmd[]  = { "alacritty" };
+static const char *increasevolumecmd[] = { "/usr/local/bin/increase_volume" };
+static const char *decreasevolumecmd[] = { "/usr/local/bin/decrease_volume" };
 
 /* tagging */
 static const char *tags[] = { "", "", "", "", "", "" };
@@ -109,6 +111,8 @@ static Key keys[] = {
 	{ MODKEY|ControlMask|ShiftMask, XK_q,      quit,           {1} }, 
 	{ MODKEY|ShiftMask,          XK_n,            togglecolorfultag,   {0} },
 	{ MODKEY|ControlMask,           XK_n,            togglecolorfultitle, {0} },
+    { MODKEY,                       XK_Up,     spawn,          {.v = increasevolumecmd }},
+    { MODKEY,                       XK_Down,   spawn,          {.v = decreasevolumecmd }}
 };
 
 /* button definitions */

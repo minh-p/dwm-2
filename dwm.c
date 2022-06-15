@@ -808,7 +808,7 @@ drawstatusbar(Monitor *m, int bh, char* stext) {
 
 	drw_setscheme(drw, scheme[LENGTH(colors)]);
 	drw->scheme[ColFg] = scheme[SchemeNorm][ColFg];
-	drw->scheme[ColBg] = scheme[SchemeNorm][ColBg];
+	drw->scheme[ColBg] = scheme[SchemeDarker][ColBg];
 	drw_rect(drw, x, 0, w, bh, 1, 1);
 	x++;
 

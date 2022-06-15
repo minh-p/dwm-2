@@ -19,7 +19,7 @@ static const unsigned int colorfultag    = 1;  /* 0 means use SchemeSel for sele
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_bg, "-nf", col_fg, "-sb", col_dark, "-sf", col_blue, NULL };
+static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_white, "-nf", col_dark, "-sb", col_blue, "-sf", col_white, NULL };
 static const char *termcmd[]  = { "alacritty" };
 static const char *increasevolumecmd[] = { "/usr/local/bin/increase_volume" };
 static const char *decreasevolumecmd[] = { "/usr/local/bin/decrease_volume" };

@@ -15,11 +15,11 @@ static const char *fonts[]          = {"JetBrains Mono:size=12"};
 static const char dmenufont[]       = "JetBrains Mono:size=12";
 static const unsigned int colorfultitle  = 1;  /* 0 means title use SchemeTitle and SchemeTitleFloat */
 static const unsigned int colorfultag    = 1;  /* 0 means use SchemeSel for selected tag */
-#include "./schemes/default-custom-dark.h"
+#include "./schemes/default-custom.h"
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_solarized_dark, "-nf", col_fg, "-sb", col_red, "-sf", col_dark, NULL };
+static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_bg, "-nf", col_fg, "-sb", col_red, "-sf", col_dark, NULL };
 static const char *termcmd[]  = { "alacritty" };
 static const char *increasevolumecmd[] = { "/usr/local/bin/increase_volume" };
 static const char *decreasevolumecmd[] = { "/usr/local/bin/decrease_volume" };
@@ -42,8 +42,8 @@ static const Rule rules[] = {
 	{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
 	{ "firefox",  NULL,       NULL,       1 << 1,       0,           -1 },
 	{ "qutebrowser",  NULL,       NULL,       1 << 1,       0,           -1 },
-	{ "discord",  NULL,       NULL,       1 << 2,			0,           -1 },
-	{ "mpv",	  NULL,       NULL,       1 << 5,			0,           -1 },
+	{ "discord",  NULL,       NULL,       1 << 4,			0,           -1 },
+	{ "spotify",	  NULL,       NULL,       1 << 3,			0,           -1},
 	{ "Spotify",	  NULL,       NULL,       1 << 3,			0,           -1}
 };
 

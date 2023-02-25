@@ -11,8 +11,8 @@ static const int topbar             = 1;        /* 0 means bottom bar */
 static const int vertpad            = 0;       /* vertical padding of bar */
 static const int sidepad            = 0;       /* horizontal padding of bar */
 static const int user_bh            = 20;        /* 0 means that dwm will calculate bar height, >= 1 means dwm will user_bh as bar height */
-static const char *fonts[]          = {"Font Awesome 6 Free:size=8", "monospace:size=10"};
-static const char dmenufont[]       = "monospace:size=10";
+static const char *fonts[]          = {"JetBrains Mono:size=12"};
+static const char dmenufont[]       = "JetBrains Mono:size=12";
 static const unsigned int colorfultitle  = 1;  /* 0 means title use SchemeTitle and SchemeTitleFloat */
 static const unsigned int colorfultag    = 1;  /* 0 means use SchemeSel for selected tag */
 #include "./schemes/default-custom-dark.h"
@@ -25,7 +25,7 @@ static const char *increasevolumecmd[] = { "/usr/local/bin/increase_volume" };
 static const char *decreasevolumecmd[] = { "/usr/local/bin/decrease_volume" };
 
 /* tagging */
-static const char *tags[] = { "", "", "", "", "", "" };
+static const char *tags[] = { "dev1", "web1", "dev2", "music", "chat", "obs", "extra1", "extra2" };
 static const int tagschemes[] = { SchemeTag1, SchemeTag2, SchemeTag3,
                                   SchemeTag4, SchemeTag5, SchemeTag6,
                                   SchemeTag7, SchemeTag8, SchemeTag9 };

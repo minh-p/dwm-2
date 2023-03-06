@@ -15,7 +15,7 @@ static const char *fonts[]          = {"JetBrains Mono:size=12"};
 static const char dmenufont[]       = "JetBrains Mono:size=12";
 static const unsigned int colorfultitle  = 1;  /* 0 means title use SchemeTitle and SchemeTitleFloat */
 static const unsigned int colorfultag    = 1;  /* 0 means use SchemeSel for selected tag */
-#include "./schemes/default-custom.h"
+#include "./schemes/default-custom-dark.h"
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
